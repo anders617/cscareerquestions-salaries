@@ -1,13 +1,23 @@
-# /r/cscareerquestions Salary Scraper
+# /r/cscareerquestions Salary Scraper 
+
+This script scrapes /r/cscareerquestions salary sharing threads for offer information and writes these details to a csv file. Currently it records info for the following fields: company, location, salary, relocation bonus, signing bonus, stock, and total compensation.
+
+
+- **[Overview](#Overview)**
+- **[Setup](#Setup-And-Run)**
+- **[Output](#Output)**
+- **[Modifying The Script](#Modifying-The-Script)**
+
+# Overview
 The [/r/cscareerquestions](https://reddit.com/r/cscareerquestions) subreddit hosts periodic salary sharing threads where people share details of their job offers ([like this one](https://www.reddit.com/r/cscareerquestions/comments/czhew5/official_salary_sharing_thread_for_new_grads)). 
 
-This script scrapes these threads for offer information and writes these details to a csv file. Currently it records info for the following fields: company, location, salary, relocation bonus, signing bonus, stock, and total compensation.
+This script scrapes /r/cscareerquestions salary sharing threads for offer information and writes these details to a csv file. Currently it records info for the following fields: company, location, salary, relocation bonus, signing bonus, stock, and total compensation.
 
-If you don't care about running the script and just want the data, then look at [output/salaries.csv](https://github.com/anders617/cscareerquestions-salaries/blob/master/output/salaries.csv)
+**If you don't care about running the script and just want the data, then look at [output/salaries.csv](https://github.com/anders617/cscareerquestions-salaries/blob/master/output/salaries.csv)**
 
 Commenters don't use a common format when inputing data (e.g. they often write in text instead of numbers) so none of the fields are strictly numbers. This means its hard to do any analysis of salary/relocation/signing/stock without doing some serious cleanup of the data. So, for now this is mostly just useful as a personal reference for what salaries to expect from various companies.
 
-## Setup
+# Setup And Run
 Clone this repository:
 ```shell
 git clone https://github.com/anders617/cscareerquestions-salaries.git
@@ -47,6 +57,8 @@ Run salaries.py in the terminal:
 ```shell
 python salaries.py --output=output/salaries.csv --verbose
 ```
+
+# Output
 
 You should get output similar to the following:
 ```
@@ -129,3 +141,9 @@ Here are the first few lines of output/salaries.csv:
 |2019-09-04 13:38:07|Finance|80k|Boston|5k|5k|0|85k|https://www.reddit.com/r/cscareerquestions/comments/czhew5/official_salary_sharing_thread_for_new_grads/eyyx82q|
 
 You can view the entire output from a recent run in [output/salaries.csv](https://github.com/anders617/cscareerquestions-salaries/blob/master/output/salaries.csv)
+
+# Modifying The Script
+
+Currently this only looks at **New Grad** salary sharing threads but can be pretty easily modified to parse whatever threads you want by modifying the ```submission_ids``` list in ```main.py``` to contain the ids of the desired salary sharing threads.
+
+The id of a thread can be found in the url. (e.g. the id of reddit.com/r/cscareerquestions/comments/czhew5/official_salary_sharing_thread_for_new_grads/ is czhew5)
