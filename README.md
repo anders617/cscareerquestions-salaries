@@ -5,6 +5,8 @@ This script scrapes these threads for offer information and writes these details
 
 If you don't care about running the script and just want the data, then look at [output/salaries.csv](https://github.com/anders617/cscareerquestions-salaries/blob/master/output/salaries.csv)
 
+Commenters don't use a common format when inputing data (e.g. they often write in text instead of numbers) so none of the fields are strictly numbers. This means its hard to do any analysis of salary/relocation/signing/stock without doing some serious cleanup of the data. So, for now this is mostly just useful as a personal reference for what salaries to expect from various companies.
+
 ## Setup
 Clone this repository:
 ```shell
@@ -26,7 +28,12 @@ conda install -c conda-forge python-dotenv
 ```
 Next you will need to get credentials to make use of the Reddit API
 
-Navigate to [https://www.reddit.com/prefs/apps](https://www.reddit.com/prefs/apps) and click the "create app" button. You should create an app in order to get a client id and client secret.
+Navigate to [https://www.reddit.com/prefs/apps](https://www.reddit.com/prefs/apps) and click the "create app" button. 
+Create an app in order to get a client id and client secret.
+
+You can find the CLIENT_ID and CLIENT_SECRET in the locations marked below:
+
+![img](images/reddit_app_example.png)
 
 Create a new .env file in the same directory as salaries.py with the following contents (using your new client id/secret):
 ```shell
