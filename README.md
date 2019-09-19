@@ -3,6 +3,8 @@ The /r/cscareerquestions subreddit hosts periodic salary sharing threads where p
 
 This script scrapes these threads for offer information and writes these details to a csv file. Currently it records info for the following fields: company, location, salary, relocation bonus, signing bonus, stock, and total compensation.
 
+If you don't care about running the script and just want the data, then look at [output/salaries.csv](https://github.com/anders617/cscareerquestions-salaries/blob/master/output/salaries.csv)
+
 ## Setup
 Clone this repository:
 ```shell
