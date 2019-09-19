@@ -1,5 +1,5 @@
 # /r/cscareerquestions Salary Scraper
-The /r/cscareerquestions subreddit hosts periodic salary sharing threads where people share details of their job offers ([like this one](https://www.reddit.com/r/cscareerquestions/comments/czhew5/official_salary_sharing_thread_for_new_grads)). 
+The [/r/cscareerquestions](https://reddit.com/r/cscareerquestions) subreddit hosts periodic salary sharing threads where people share details of their job offers ([like this one](https://www.reddit.com/r/cscareerquestions/comments/czhew5/official_salary_sharing_thread_for_new_grads)). 
 
 This script scrapes these threads for offer information and writes these details to a csv file. Currently it records info for the following fields: company, location, salary, relocation bonus, signing bonus, stock, and total compensation.
 
